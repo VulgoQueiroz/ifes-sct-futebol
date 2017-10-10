@@ -23,6 +23,6 @@ class Jogador(models.Model):
     drible = models.IntegerField()
     defesa = models.IntegerField() 
     fisico = models.IntegerField()
-
+    preco = models.DecimalField(max_digits=5, decimal_places=2)
 
 	
