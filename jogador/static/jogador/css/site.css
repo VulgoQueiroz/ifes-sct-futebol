@@ -1,0 +1,39 @@
+body {
+    background-image: url("PDFI.png");
+    background-color: #001a00;
+    background-repeat: no-repeat;
+    background-size: cover;
+	color: white;
+}
+
+.titulo-inicial {
+	margin-top: 25px;
+	font-size: 300%;
+}
+
+.texto-inicial {
+	font-size: 230%;
+    margin-top: 15px;
+}
+
+.botao-pesquisar {
+	display: flex;
+	justify-content: center;
+}
+
+.margem {
+	margin-top: 20px;
+}
+
+.conteudo {
+	margin-top: 20px;
+}
+
+.label-formulario {
+	margin-top: 5px;
+}
+
+.tabela-pesquisa {
+	background-color: white !important;
+	color: black !important;
+}

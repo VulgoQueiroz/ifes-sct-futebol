@@ -1,0 +1,42 @@
+{% extends 'jogador/base.html' %}
+{% block content %}
+  {% if jogadores_list %}
+    <h1 class="text-center">Jogadores Encontrados:</h1>
+    <table class="margem table tabela-pesquisa table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Ritmo</th>
+          <th>Chute</th>
+          <th>Passe</th>
+          <th>Drible</th>
+          <th>Defesa</th>
+          <th>Físico</th>
+          <th>Preço (mi)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for jogador in jogadores_list %}
+        <tr>
+          <th><a href="/jogador/perfil/{{jogador.id}}">{{jogador.nome}}</a></th>
+          <th>{{jogador.ritmo}}</th>
+          <th>{{jogador.chute}}</th>
+          <th>{{jogador.passe}}</th>
+          <th>{{jogador.drible}}</th>
+          <th>{{jogador.defesa}}</th>
+          <th>{{jogador.fisico}}</th>            
+          <th>€ {{jogador.preco}}</th>
+        </tr>
+        {% endfor %}  
+      </tbody>  
+    </table> 
+  {% else %}
+    <div class="col-6">
+      <h1>Não possui jogadores com os atributos escolhidos.</h1>
+      <video class="margem" width="90%" height="90%" autoplay loop>
+        <source src="/static/jogador/meme-confused.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  {% endif %}
+{% endblock %}

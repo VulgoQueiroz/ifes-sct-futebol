@@ -1,0 +1,38 @@
+[
+{
+  "model": "jogador.jogador",
+  "pk": 1,
+  "fields": {
+    "nome": "R\u00f4mulo",
+    "idade": 24,
+    "altura": "1.70",
+    "posicao": "MEI",
+    "preco": "50.00",
+    "clube": 1,
+    "ritmo": 67,
+    "chute": 84,
+    "passe": 81,
+    "drible": 67,
+    "defesa": 56,
+    "fisico": 99
+  }
+},
+{
+  "model": "jogador.jogador",
+  "pk": 2,
+  "fields": {
+    "nome": "Marcus",
+    "idade": 17,
+    "altura": "1.74",
+    "posicao": "ATA",
+    "preco": "15.00",
+    "clube": 2,
+    "ritmo": 56,
+    "chute": 69,
+    "passe": 73,
+    "drible": 48,
+    "defesa": 46,
+    "fisico": 81
+  }
+}
+]

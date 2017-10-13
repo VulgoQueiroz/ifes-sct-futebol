@@ -1,28 +1,33 @@
 from django.db import models
 
 class Clube(models.Model):
-	nome = models.CharField(max_length=200)	
+	nome = models.CharField(max_length=200)
+
+	def __str__(self):
+		return self.nome
 
 class Jogador(models.Model):
-    nome = models.CharField(max_length=200)
-    idade = models.IntegerField()
-    altura = models.DecimalField(max_digits=3, decimal_places=2)
+	nome = models.CharField(max_length=200)
+	idade = models.IntegerField()
+	altura = models.DecimalField(max_digits=3, decimal_places=2)
 
-    POSICOES = (
-    	('ATA', 'Atacante'),
-    	('MEI', 'Meio-Campo'),
-    	('ZAG', 'Zagueiro'),
-    	('LAT', 'Lateral'),
-    )
+	POSICOES = (
+		('ATA', 'Atacante'),
+		('MEI', 'Meio-Campo'),
+		('ZAG', 'Zagueiro'),
+		('LAT', 'Lateral'),
+	)
 
-    posicao = models.CharField(choices=POSICOES, max_length=3)
-    clube = models.ForeignKey(Clube)
-    ritmo = models.IntegerField() 
-    chute = models.IntegerField()
-    passe = models.IntegerField()
-    drible = models.IntegerField()
-    defesa = models.IntegerField() 
-    fisico = models.IntegerField()
-    preco = models.DecimalField(max_digits=5, decimal_places=2)
-
+	posicao = models.CharField(choices=POSICOES, max_length=3)
+	preco = models.DecimalField(max_digits=5, decimal_places=2)
+	clube = models.ForeignKey(Clube)
 	
+	ritmo = models.IntegerField() 
+	chute = models.IntegerField()
+	passe = models.IntegerField()
+	drible = models.IntegerField()
+	defesa = models.IntegerField() 
+	fisico = models.IntegerField()
+
+	def __str__(self):
+		return self.nome

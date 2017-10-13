@@ -1,0 +1,76 @@
+{% extends 'jogador/base.html' %}
+{% block content %}
+  <h1 class="text-center">Formulário de pesquisa</h1>
+  <form id="pesquisa" action="/jogador/resultado_pesquisa" method="post">
+  {% csrf_token %}
+    <div class="label-formulario">
+      <label for="ritmo">Ritmo:</label>
+      <select class="form-control" name="ritmo" form="pesquisa">
+        <option value=0>-------</option>
+        <option value=1>0 - 20</option>
+        <option value=2>21 - 40</option>
+        <option value=3>41 - 60</option>
+        <option value=4>61 - 80</option>
+        <option value=5>81 - 100</option>
+      </select>
+    </div>
+    <div class="label-formulario">
+      <label for="chute">Chute:</label>
+      <select class="form-control" name="chute" form="pesquisa">
+        <option value=0>-------</option>
+        <option value=1>0 - 20</option>
+        <option value=2>21 - 40</option>
+        <option value=3>41 - 60</option>
+        <option value=4>61 - 80</option>
+        <option value=5>81 - 100</option>
+      </select>
+    </div>
+    <div class="label-formulario">
+      <label for="passe">Passe:</label>
+      <select class="form-control" name="passe" form="pesquisa">
+        <option value=0>-------</option>
+        <option value=1>0 - 20</option>
+        <option value=2>21 - 40</option>
+        <option value=3>41 - 60</option>
+        <option value=4>61 - 80</option>
+        <option value=5>81 - 100</option>
+      </select>
+    </div>
+    <div class="label-formulario">
+      <label for="drible">Drible:</label>
+      <select class="form-control" name="drible" form="pesquisa">
+        <option value=0>-------</option>
+        <option value=1>0 - 20</option>
+        <option value=2>21 - 40</option>
+        <option value=3>41 - 60</option>
+        <option value=4>61 - 80</option>
+        <option value=5>81 - 100</option>
+      </select>
+    </div>
+    <div class="label-formulario">
+      <label for="defesa">Defesa:</label>
+      <select class="form-control" name="defesa" form="pesquisa">
+        <option value=0>-------</option>
+        <option value=1>0 - 20</option>
+        <option value=2>21 - 40</option>
+        <option value=3>41 - 60</option>
+        <option value=4>61 - 80</option>
+        <option value=5>81 - 100</option>
+      </select>
+    </div>
+    <div class="label-formulario">
+      <label for="fisico">Físico:</label>
+      <select class="form-control" name="fisico" form="pesquisa">
+        <option value=0>-------</option>
+        <option value=1>0 - 20</option>
+        <option value=2>21 - 40</option>
+        <option value=3>41 - 60</option>
+        <option value=4>61 - 80</option>
+        <option value=5>81 - 100</option>
+      </select>
+    </div>
+    <div class="botao-pesquisar margem">
+      <input class="btn btn-success btn-lg" type="submit" value="Pesquisar">   
+    </div>
+  </form>
+{% endblock %}

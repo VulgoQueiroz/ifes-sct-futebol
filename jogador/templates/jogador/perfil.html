@@ -1,0 +1,38 @@
+{% extends 'jogador/base.html' %}
+{% block content %}
+
+  <style>
+      body {
+          background-image: url("/static/jogador/css/PDF-Perfil.png") !important;
+      }
+  </style>
+  
+  <div class="row">
+    <div class="col">
+      <h1>{{jogador.nome}}</h1>
+      <p>
+        <ul class="list-unstyled">
+          <li>Idade: {{jogador.idade}}</li>
+          <li>Altura: {{jogador.altura}}</li>
+          <li>Posição: {{jogador.posicao}}</li>
+          <li>Clube: {{jogador.clube}}</li>
+          <li>Preço: € {{jogador.preco}} milhões</li>
+        </ul>
+      </p>
+      <h4 class="margem">Atributos</h4>
+      <p>
+        <ul class="list-unstyled">
+          <li>Ritmo: {{jogador.ritmo}}</li>
+          <li>Chute: {{jogador.chute}}</li>
+          <li>Passe: {{jogador.passe}}</li>
+          <li>Drible: {{jogador.drible}}</li>
+          <li>Defesa: {{jogador.defesa}}</li>
+          <li>Fisico: {{jogador.fisico}}</li>
+        </ul>
+      </p>
+    </div>
+    <div class="col">
+      <img src="/static/jogador/fotos/{{jogador.nome}}.png">
+    </div>
+  </div>
+{% endblock%}
